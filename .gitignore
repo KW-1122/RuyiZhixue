@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/*.db
+data/*.db-*
+data/**/*.db
+data/**/*.db-*
+.ssh/
+models/**/*.bin
+models/**/*.safetensors
+knowledge_base/public_sources/*.pdf

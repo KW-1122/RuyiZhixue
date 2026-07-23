@@ -1,0 +1,250 @@
+{
+  "model": "deepseek-v4-flash",
+  "dataset": "C-Eval CC BY-NC-SA 4.0",
+  "splits": {
+    "middle_school_mathematics": {
+      "samples": 19,
+      "accuracy": 0.7895,
+      "details": [
+        {
+          "id": 0,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "predicted": "",
+          "answer": "D",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 5,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 6,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 7,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 8,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 9,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 10,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 11,
+          "predicted": "",
+          "answer": "C",
+          "correct": false
+        },
+        {
+          "id": 12,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        },
+        {
+          "id": 13,
+          "predicted": "",
+          "answer": "B",
+          "correct": false
+        },
+        {
+          "id": 14,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 15,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        },
+        {
+          "id": 16,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 17,
+          "predicted": "",
+          "answer": "B",
+          "correct": false
+        },
+        {
+          "id": 18,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        }
+      ]
+    },
+    "middle_school_physics": {
+      "samples": 19,
+      "accuracy": 1.0,
+      "details": [
+        {
+          "id": 0,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 5,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 6,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 7,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 8,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 9,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 10,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 11,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 12,
+          "predicted": "C",
+          "answer": "C",
+          "correct": true
+        },
+        {
+          "id": 13,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 14,
+          "predicted": "B",
+          "answer": "B",
+          "correct": true
+        },
+        {
+          "id": 15,
+          "predicted": "D",
+          "answer": "D",
+          "correct": true
+        },
+        {
+          "id": 16,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        },
+        {
+          "id": 17,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        },
+        {
+          "id": 18,
+          "predicted": "A",
+          "answer": "A",
+          "correct": true
+        }
+      ]
+    }
+  },
+  "overall": {
+    "samples": 38,
+    "accuracy": 0.8947
+  }
+}

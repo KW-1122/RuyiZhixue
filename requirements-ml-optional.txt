@@ -1,0 +1,4 @@
+# 可选的真实本地向量检索/重排环境；基础演示不强制安装。
+sentence-transformers>=3,<4
+faiss-cpu>=1.8,<2
+torch>=2.3,<3

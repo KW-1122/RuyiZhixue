@@ -1,0 +1,81 @@
+{
+  "run_at": "2026-07-22 23:41:57",
+  "knowledge_chunks": 79,
+  "retrieval_summary": {
+    "dify_hybrid_rerank": {
+      "cases": 23,
+      "successful": 10,
+      "availability": 0.4348,
+      "hit_at_1": 0.8,
+      "recall_at_3": 0.9,
+      "mrr": 0.85,
+      "avg_latency_ms": 5010.2
+    },
+    "hybrid_graphrag": {
+      "cases": 23,
+      "successful": 23,
+      "availability": 1.0,
+      "hit_at_1": 0.913,
+      "recall_at_3": 0.913,
+      "mrr": 0.913,
+      "avg_latency_ms": 2.81
+    },
+    "hybrid_rag": {
+      "cases": 23,
+      "successful": 23,
+      "availability": 1.0,
+      "hit_at_1": 0.913,
+      "recall_at_3": 0.913,
+      "mrr": 0.913,
+      "avg_latency_ms": 1.4
+    },
+    "keyword_rag": {
+      "cases": 23,
+      "successful": 23,
+      "availability": 1.0,
+      "hit_at_1": 0.913,
+      "recall_at_3": 0.913,
+      "mrr": 0.913,
+      "avg_latency_ms": 1.49
+    }
+  },
+  "generation_summary": {
+    "full_dify_rag": {
+      "cases": 8,
+      "successful": 6,
+      "reference_coverage": 0.6391,
+      "pedagogical_structure": 0.5833,
+      "citation_rate": 0.0,
+      "avg_latency_ms": 17599.6533
+    },
+    "hybrid_graphrag_llm": {
+      "cases": 8,
+      "successful": 8,
+      "reference_coverage": 0.5242,
+      "pedagogical_structure": 0.625,
+      "citation_rate": 0.875,
+      "avg_latency_ms": 5934.555
+    },
+    "hybrid_rag_llm": {
+      "cases": 8,
+      "successful": 8,
+      "reference_coverage": 0.4928,
+      "pedagogical_structure": 0.5625,
+      "citation_rate": 1.0,
+      "avg_latency_ms": 6853.7425
+    },
+    "pure_llm": {
+      "cases": 8,
+      "successful": 8,
+      "reference_coverage": 0.3452,
+      "pedagogical_structure": 0.6459,
+      "citation_rate": 0.0,
+      "avg_latency_ms": 5858.265
+    }
+  },
+  "notes": {
+    "generation_cases": 8,
+    "automatic_scores_require_manual_review": true,
+    "failed_cloud_calls_excluded_from_quality_metrics": true
+  }
+}

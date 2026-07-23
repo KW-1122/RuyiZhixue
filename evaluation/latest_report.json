@@ -1,0 +1,240 @@
+{
+  "knowledge_chunks": 79,
+  "retrieval_cases": 23,
+  "recall_at_3": 0.913,
+  "mrr": 0.913,
+  "out_of_scope_refusal": true,
+  "safety_guardrail": true,
+  "details": [
+    {
+      "query": "3x-5=10 应该怎样解",
+      "expected": "linear_equation",
+      "top3": [
+        "linear_equation",
+        "integer_power",
+        "algebra_simplify"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "为什么方程移项以后要变号",
+      "expected": "linear_equation",
+      "top3": [
+        "linear_equation",
+        "fraction_equation",
+        "quadratic_function"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "负数乘负数为什么得到正数",
+      "expected": "negative_number",
+      "top3": [
+        "integer_power",
+        "integer_power",
+        "inequality"
+      ],
+      "rank": 0
+    },
+    {
+      "query": "-2 的平方和括号负二的平方一样吗",
+      "expected": "integer_power",
+      "top3": [
+        "quadratic_root",
+        "quadratic_root",
+        "quadratic_root"
+      ],
+      "rank": 0
+    },
+    {
+      "query": "4a-2+3a+5 如何化简",
+      "expected": "algebra_simplify",
+      "top3": [
+        "algebra_simplify",
+        "quadratic_root",
+        "linear_equation"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "不等式除以负数为何改变方向",
+      "expected": "inequality",
+      "top3": [
+        "inequality",
+        "inequality",
+        "inequality"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "坐标点向上移动应该修改哪个坐标",
+      "expected": "coordinate",
+      "top3": [
+        "coordinate",
+        "coordinate",
+        "coordinate"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "一次函数的斜率代表什么",
+      "expected": "proportion",
+      "top3": [
+        "proportion",
+        "proportion",
+        "proportion"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "x平方减9怎么因式分解",
+      "expected": "factorization",
+      "top3": [
+        "factorization",
+        "factorization",
+        "factorization"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "分式方程为什么必须验根",
+      "expected": "fraction_equation",
+      "top3": [
+        "fraction_equation",
+        "fraction_equation",
+        "fraction_equation"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "根号a平方为什么不一定等于a",
+      "expected": "quadratic_root",
+      "top3": [
+        "quadratic_root",
+        "quadratic_root",
+        "pythagorean"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "相似三角形对应边怎么找",
+      "expected": "similar_triangle",
+      "top3": [
+        "similar_triangle",
+        "similar_triangle",
+        "similar_triangle"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "平均数和中位数哪个不怕极端值",
+      "expected": "statistics",
+      "top3": [
+        "statistics",
+        "statistics",
+        "statistics"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "掷骰子出现偶数的概率",
+      "expected": "probability",
+      "top3": [
+        "probability",
+        "probability",
+        "probability"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "二次函数如何求顶点",
+      "expected": "quadratic_function",
+      "top3": [
+        "quadratic_function",
+        "quadratic_function",
+        "quadratic_function"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "勾股定理什么时候能用",
+      "expected": "pythagorean",
+      "top3": [
+        "pythagorean",
+        "triangle",
+        "quadratic_function"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "平均速度为什么不是两段速度相加除二",
+      "expected": "average_speed",
+      "top3": [
+        "average_speed",
+        "distance_time",
+        "negative_number"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "受力分析要画运动方向吗",
+      "expected": "force",
+      "top3": [
+        "force",
+        "force",
+        "force"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "为什么刀刃越薄越锋利",
+      "expected": "pressure",
+      "top3": [
+        "pressure",
+        "pressure",
+        "pressure"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "漂浮物体在盐水和清水中浮力一样吗",
+      "expected": "buoyancy",
+      "top3": [
+        "buoyancy",
+        "buoyancy",
+        "buoyancy"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "功率大是不是做功一定多",
+      "expected": "work_power",
+      "top3": [
+        "work_power",
+        "work_power",
+        "work_power"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "入射角是光线与镜面的夹角吗",
+      "expected": "light",
+      "top3": [
+        "light",
+        "light",
+        "light"
+      ],
+      "rank": 1
+    },
+    {
+      "query": "物体切成两半密度变不变",
+      "expected": "density",
+      "top3": [
+        "density",
+        "buoyancy",
+        "density"
+      ],
+      "rank": 1
+    }
+  ]
+}

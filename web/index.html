@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>如意智学 · RuyiTutor</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+      svg: { fontCache: 'global' },
+      startup: { typeset: false }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand"><span>如</span><div><b>如意智学</b><small>RuyiTutor</small></div></div>
+      <nav>
+        <button class="nav active" data-view="tutor">✦ 智能辅导</button>
+        <button class="nav" data-view="graph">⌘ 知识图谱</button>
+        <button class="nav" data-view="profile">◌ 学情驾驶舱</button>
+        <button class="nav" data-view="practice">✓ 智能练习</button>
+        <button class="nav" data-view="teacher">▦ 教师工作台</button>
+        <button class="nav" data-view="history">◷ 学习档案</button>
+      </nav>
+      <div class="status"><i></i><div><b id="engine">引擎检测中</b><small>引用溯源与安全守护已开启</small></div></div>
+    </aside>
+    <main>
+      <header><div><small>LEARNING COPILOT</small><h1 id="pageTitle">今天想弄懂什么？</h1></div><div class="student"><select id="userSelect"><option value="demo-student">八年级 · 小如同学</option></select><span>82</span></div></header>
+      <section id="tutor" class="view active">
+        <div class="hero"><div><p>不只给答案，更陪你找到答案。</p><div class="chips"><span>可追溯引用</span><span>分步启发</span><span>因材施教</span></div></div><div class="orbit">π<em>x²</em><b>v=s/t</b></div></div>
+        <div id="messages" class="messages"><div class="welcome"><strong>✦</strong><h2>你好，我是你的 AI 学习伙伴</h2><p>我会先定位知识点，再根据教材资料一步步启发你。试试下面的问题：</p><div class="prompts"><button>一元一次方程 3x-5=10 怎么解？</button><button>为什么负负得正？</button><button>速度和平均速度有什么区别？</button></div></div></div>
+        <div class="composer"><div class="selectors"><select id="subject"><option>自动识别</option><option>数学</option><option>物理</option></select><select id="mode"><option>启发辅导</option><option>快速讲解</option><option>举一反三</option></select><label class="upload">⌁ 上传题目图片<input id="imageInput" type="file" accept="image/*" hidden></label><button id="newChat" class="miniBtn">＋ 新对话</button></div><div id="ocrBox" class="ocrBox"><span id="ocrStatus">识别结果可在发送前校正</span><button id="ocrClose">×</button></div><div class="inputrow"><textarea id="query" rows="2" placeholder="把不懂的题目或知识点告诉我……"></textarea><button id="send">➜</button></div><small>AI 可能出错，请结合引用资料与老师指导进行判断。</small></div>
+      </section>
+      <section id="graph" class="view"><div class="sectionHead"><div><small>KNOWLEDGE MAP</small><h2>知识不是孤岛</h2><p>查看概念之间的前置、关联与迁移路径。</p></div><div class="legend"><span>● 数学</span><span>● 物理</span></div></div><div id="graphCanvas" class="graphCanvas"></div></section>
+      <section id="profile" class="view"><div class="sectionHead"><div><small>LEARNING INSIGHTS</small><h2>每一次练习都算数</h2><p>基于知识点表现生成可解释的学习建议。</p></div></div><div class="dashboard"><div class="score"><div id="overall">--</div><b>综合掌握度</b><small>继续保持稳定练习</small></div><div class="mastery"><h3>知识点掌握</h3><div id="bars"></div></div><div class="recommend"><small>NEXT BEST ACTION</small><h3>今日学习建议</h3><p id="recommendation">正在生成建议……</p><button data-view="tutor" class="jump">开始巩固 →</button></div></div></section>
+      <section id="practice" class="view"><div class="sectionHead"><div><small>ADAPTIVE PRACTICE</small><h2>练习—反馈—再练一次</h2><p>难度匹配当前掌握度，错题自动进入错题本。</p></div></div><div class="practiceLayout"><div class="practiceCard"><small id="practiceConcept">智能选题</small><h2 id="practiceQuestion">正在加载题目…</h2><input id="practiceAnswer" placeholder="输入你的答案，注意单位"><div class="practiceActions"><button id="hintPractice">给我提示</button><button id="submitPractice">提交答案</button></div><div id="practiceResult"></div></div><div class="panel"><h3>错题本</h3><div id="wrongList" class="records"></div></div></div></section>
+      <section id="teacher" class="view"><div class="sectionHead"><div><small>TEACHER CONSOLE</small><h2>班级学情与质量治理</h2><p>发现共同薄弱点，追踪低置信度回答并闭环反馈。</p></div></div><div class="teacherStats"><div><small>班级人数</small><b id="studentCount">--</b></div><div><small>平均掌握度</small><b id="classAverage">--</b></div><div><small>辅导问题数</small><b id="questionCount">--</b></div><div><small>待复核回答</small><b id="lowConfidence">--</b></div></div><div class="teacherGrid"><div class="panel"><h3>班级薄弱知识点</h3><div id="weakConcepts"></div></div><div class="panel"><h3>最近辅导记录</h3><div id="recentQuestions" class="records"></div></div><div class="panel"><h3>质量治理队列</h3><div id="qualityIssues" class="records"></div></div><div class="panel"><h3>知识库状态</h3><div id="knowledgeStatus" class="records"></div><details><summary>新增知识条目</summary><div class="kbForm"><input id="kbId" placeholder="英文ID，如 force_balance"><input id="kbName" placeholder="知识点名称"><textarea id="kbDefinition" placeholder="概念定义（至少10字）"></textarea><button id="addKnowledge">清洗并重新索引</button><small id="kbStatus"></small></div></details></div></div></section>
+      <section id="history" class="view"><div class="sectionHead"><div><small>LEARNING ARCHIVE</small><h2>学习档案</h2><p>对话、引用收藏和学习过程均已持久化。</p></div></div><div class="teacherGrid"><div class="panel"><h3>最近对话</h3><div id="historyList" class="records"></div></div><div class="panel"><h3>我的收藏</h3><div id="favoriteList" class="records"></div></div><div class="panel"><h3>演示账号登录</h3><div class="kbForm"><input id="loginId" value="demo-student"><input id="loginPassword" type="password" value="ruyi-demo-2026"><button id="loginButton">登录并获取会话</button><small id="loginStatus">正式部署请修改默认密码。</small></div></div></div></section>
+    </main>
+  </div>
+  <script src="/assets/app.js?v=20260722-math"></script>
+</body>
+</html>

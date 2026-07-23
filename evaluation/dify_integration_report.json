@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-07-22",
+  "application": "如意智学RuyiTutor",
+  "engine": "Dify RAG",
+  "dataset_id": "539db30c-2d1b-40ab-b113-ae99b284e6aa",
+  "dify_documents": 25,
+  "logical_chunks": 79,
+  "indexing": {"completed": 25, "failed": 0},
+  "models": {
+    "llm": "deepseek-v4-flash",
+    "embedding": "BAAI/bge-m3",
+    "reranker": "BAAI/bge-reranker-v2-m3"
+  },
+  "retrieval_checks": [
+    {"query": "为什么负负得正？", "top1": "01_negative_number.md", "score": 0.6843, "correct": true},
+    {"query": "3x-5=10怎么解？", "top1": "02_linear_equation.md", "score": 0.6141, "correct": true},
+    {"query": "平均速度为什么不能直接平均？", "top1": "04_average_speed.md", "score": 0.6866, "correct": true},
+    {"query": "刀刃越薄为什么越锋利？", "top1": "八年级-物理-压强与液体压强", "score": 0.4984, "correct": true},
+    {"query": "浮力大小和什么有关？", "top1": "八年级-物理-浮力与阿基米德原理", "score": 0.6562, "correct": true}
+  ],
+  "chatflow_check": {"query": "为什么负负得正？", "answer_length": 1168, "sources": 4, "top_source": "01_negative_number.md", "rerank_score": 0.987},
+  "local_api_check": {"query": "刀刃越薄为什么越锋利？", "engine": "Dify RAG", "answer_length": 2070, "sources": 4, "grounded": true},
+  "fallback": "Local GraphRAG remains enabled when Dify is unavailable"
+}

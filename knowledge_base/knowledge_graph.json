@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "negative_number", "name": "有理数运算", "subject": "数学", "level": 1},
+    {"id": "algebraic_expression", "name": "代数式", "subject": "数学", "level": 1},
+    {"id": "linear_equation", "name": "一元一次方程", "subject": "数学", "level": 2},
+    {"id": "triangle", "name": "三角形基础", "subject": "数学", "level": 1},
+    {"id": "pythagorean", "name": "勾股定理", "subject": "数学", "level": 2},
+    {"id": "distance_time", "name": "路程与时间", "subject": "物理", "level": 1},
+    {"id": "average_speed", "name": "平均速度", "subject": "物理", "level": 2}
+  ],
+  "edges": [
+    {"source": "negative_number", "target": "algebraic_expression", "relation": "前置"},
+    {"source": "algebraic_expression", "target": "linear_equation", "relation": "前置"},
+    {"source": "triangle", "target": "pythagorean", "relation": "前置"},
+    {"source": "distance_time", "target": "average_speed", "relation": "前置"},
+    {"source": "linear_equation", "target": "average_speed", "relation": "计算工具"}
+  ]
+}

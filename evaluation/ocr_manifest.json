@@ -1,0 +1,5 @@
+[
+  {"file":"samples/printed_math.png","expected":"3x-5=10","category":"印刷体数学"},
+  {"file":"samples/handwritten_math.png","expected":"勾股定理","category":"手写数学"},
+  {"file":"samples/physics_units.png","expected":"m/s","category":"物理单位"}
+]

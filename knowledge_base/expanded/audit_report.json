@@ -1,0 +1,419 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "motion_reference未检测到常用物理单位",
+    "light未检测到常用物理单位",
+    "refraction未检测到常用物理单位",
+    "lens未检测到常用物理单位",
+    "newton_first_law未检测到常用物理单位"
+  ],
+  "near_duplicates": [],
+  "concepts": 70,
+  "logical_chunks": 350,
+  "documents": 33,
+  "manifest": [
+    {
+      "file": "01_七年级_数学_代数式与整式.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "代数式与整式",
+      "concepts": [
+        "algebraic_expression",
+        "algebra_simplify"
+      ],
+      "logical_chunks": 10,
+      "sha256": "53e0da4a795dc49b1af283c3dc31dbf06a1809e09668ccd016bff7cf438c2300"
+    },
+    {
+      "file": "02_七年级_数学_坐标与三角形.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "坐标与三角形",
+      "concepts": [
+        "coordinate",
+        "triangle"
+      ],
+      "logical_chunks": 10,
+      "sha256": "2900ee972ffbd74ad94414bf6d19e8c2e17021897aa02a45a45b5e808f91be38"
+    },
+    {
+      "file": "03_七年级_数学_基础几何.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "基础几何",
+      "concepts": [
+        "line_angle",
+        "parallel_lines"
+      ],
+      "logical_chunks": 10,
+      "sha256": "81d1c8ac988ad3e7e009a532df4f87b5390a7e70f56da9e96766f70da9183686"
+    },
+    {
+      "file": "04_七年级_数学_数据与统计.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "数据与统计",
+      "concepts": [
+        "data_collection"
+      ],
+      "logical_chunks": 5,
+      "sha256": "687282f8cb1411e36b3c24f2b5ea99fc6ed6158b29cd0625b63b5023c90fa3a6"
+    },
+    {
+      "file": "05_七年级_数学_方程与不等式.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "方程与不等式",
+      "concepts": [
+        "equation_basics",
+        "linear_equation",
+        "inequality_basics",
+        "inequality"
+      ],
+      "logical_chunks": 20,
+      "sha256": "8044dac6284cc28e31936b175dd62f44a7f67265610e38bca7e6cf90118085c5"
+    },
+    {
+      "file": "06_七年级_数学_有理数.md",
+      "subject": "数学",
+      "grade": "七年级",
+      "chapter": "有理数",
+      "concepts": [
+        "negative_number",
+        "absolute_value",
+        "rational_operations",
+        "integer_power"
+      ],
+      "logical_chunks": 20,
+      "sha256": "a48afbe694c3a25d1d28a37bd5429ef5d9ac646d4aeeeb452242f20d7a49f8a5"
+    },
+    {
+      "file": "07_九年级_数学_一元二次方程.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "一元二次方程",
+      "concepts": [
+        "quadratic_equation",
+        "quadratic_equation_application"
+      ],
+      "logical_chunks": 10,
+      "sha256": "aaf5584adf8eb6f7ff7e0242fcd1104f30fc07c2b83a7db56c57fe459ba86b62"
+    },
+    {
+      "file": "08_九年级_数学_二次函数.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "二次函数",
+      "concepts": [
+        "quadratic_function",
+        "quadratic_optimization"
+      ],
+      "logical_chunks": 10,
+      "sha256": "e8826996534c3cfbeffb09176ed319774b2186c429aa615500d9e002c64d0c9d"
+    },
+    {
+      "file": "09_九年级_数学_图形变换与投影.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "图形变换与投影",
+      "concepts": [
+        "rotation",
+        "projection_view"
+      ],
+      "logical_chunks": 10,
+      "sha256": "56839ad86e9b126f890f7e0452a2288322f5389f4f722672f029d896125cc83d"
+    },
+    {
+      "file": "10_九年级_数学_圆.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "圆",
+      "concepts": [
+        "circle_basics",
+        "circle_position",
+        "circle_calculation"
+      ],
+      "logical_chunks": 15,
+      "sha256": "b9a548b912b000510cd21d3d0cb2025c9a5a61345ad2ac7766a5ea4c270060f0"
+    },
+    {
+      "file": "11_九年级_数学_概率.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "概率",
+      "concepts": [
+        "probability"
+      ],
+      "logical_chunks": 5,
+      "sha256": "1f87693077e4861039dfd35b537400f5ea5e551da3e14584bdf48ec8b3ce43f1"
+    },
+    {
+      "file": "12_九年级_数学_相似与锐角三角函数.md",
+      "subject": "数学",
+      "grade": "九年级",
+      "chapter": "相似与锐角三角函数",
+      "concepts": [
+        "similar_triangle",
+        "trigonometry"
+      ],
+      "logical_chunks": 10,
+      "sha256": "cb69c6e534d802da2e93e2c8666771744371e6a430dec6f1c200c6f7f0694459"
+    },
+    {
+      "file": "13_八年级_数学_一次函数.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "一次函数",
+      "concepts": [
+        "proportion",
+        "linear_function"
+      ],
+      "logical_chunks": 10,
+      "sha256": "06c996ea9f74b2291dfd3562d2f9838a686c0199e56177fded119cf632906c2a"
+    },
+    {
+      "file": "14_八年级_数学_三角形与轴对称.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "三角形与轴对称",
+      "concepts": [
+        "congruent_triangle",
+        "axis_symmetry"
+      ],
+      "logical_chunks": 10,
+      "sha256": "159e3325289a69ca8ec8f2c4b40778a4b5cf4393c8c0dda81e6add24f2716b85"
+    },
+    {
+      "file": "15_八年级_数学_分式与分式方程.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "分式与分式方程",
+      "concepts": [
+        "fraction",
+        "fraction_equation"
+      ],
+      "logical_chunks": 10,
+      "sha256": "2a513ac69178bab9d433261cc70d9f5b82268d986feee22a73704349acdf80e0"
+    },
+    {
+      "file": "16_八年级_数学_勾股定理.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "勾股定理",
+      "concepts": [
+        "pythagorean"
+      ],
+      "logical_chunks": 5,
+      "sha256": "2b79765492296494ea162024ff775bc1c472390d72a81b1d83589037392a04de"
+    },
+    {
+      "file": "17_八年级_数学_四边形.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "四边形",
+      "concepts": [
+        "parallelogram",
+        "special_quadrilateral"
+      ],
+      "logical_chunks": 10,
+      "sha256": "64fa1279a44871df8f4515474b19917e8c6fc0c1620280bea276eeb136cfd456"
+    },
+    {
+      "file": "18_八年级_数学_实数与二次根式.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "实数与二次根式",
+      "concepts": [
+        "quadratic_root",
+        "radical_expression"
+      ],
+      "logical_chunks": 10,
+      "sha256": "cd90a39ebe79b55e20e40b2529142d4d6929bc1bab9b07642f6613a3991e9247"
+    },
+    {
+      "file": "19_八年级_数学_数据与统计.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "数据与统计",
+      "concepts": [
+        "statistics"
+      ],
+      "logical_chunks": 5,
+      "sha256": "066494c2551b95f2d0651bcf26fdfcc20008e07efdcf8bc6914c0d5f91c6de19"
+    },
+    {
+      "file": "20_八年级_数学_整式乘法与因式分解.md",
+      "subject": "数学",
+      "grade": "八年级",
+      "chapter": "整式乘法与因式分解",
+      "concepts": [
+        "polynomial_multiplication",
+        "factorization"
+      ],
+      "logical_chunks": 10,
+      "sha256": "712a773258fe2cb3c82c948ae0fc9fb1f09e3c35950b575db96bf9bffe4b3d64"
+    },
+    {
+      "file": "21_九年级_物理_信息、能源与可持续发展.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "信息、能源与可持续发展",
+      "concepts": [
+        "energy_information"
+      ],
+      "logical_chunks": 5,
+      "sha256": "c7ca1716e45972a8d23825ec61a3671548344daa89fca71df142720ead01ae8b"
+    },
+    {
+      "file": "22_九年级_物理_内能与热机.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "内能与热机",
+      "concepts": [
+        "molecular_internal_energy",
+        "specific_heat",
+        "heat_engine"
+      ],
+      "logical_chunks": 15,
+      "sha256": "92b6b2bc4c75254f2cd8bd53e3b9df85355c2c5640ec26af1030580d61023ff8"
+    },
+    {
+      "file": "23_九年级_物理_电与磁.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "电与磁",
+      "concepts": [
+        "magnetism",
+        "electromagnetic_induction"
+      ],
+      "logical_chunks": 10,
+      "sha256": "f73d32afffde67c98bfebcb495689a39118b13142f843838915753e598a0d77f"
+    },
+    {
+      "file": "24_九年级_物理_电功率与安全用电.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "电功率与安全用电",
+      "concepts": [
+        "electric_work_power",
+        "electric_safety"
+      ],
+      "logical_chunks": 10,
+      "sha256": "d824e78b53c9f7a95df39c5eeb784016de8b71b3ee8e9d1d4a2ce2d4ad72d96c"
+    },
+    {
+      "file": "25_九年级_物理_电压、电阻与欧姆定律.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "电压、电阻与欧姆定律",
+      "concepts": [
+        "voltage_resistance",
+        "ohms_law"
+      ],
+      "logical_chunks": 10,
+      "sha256": "3bddbf5db0eb4c467860bf7eb8f2bfa85207c06ff14ca87efe307be0019c2748"
+    },
+    {
+      "file": "26_九年级_物理_电流与电路.md",
+      "subject": "物理",
+      "grade": "九年级",
+      "chapter": "电流与电路",
+      "concepts": [
+        "electric_charge_current",
+        "series_parallel_circuit"
+      ],
+      "logical_chunks": 10,
+      "sha256": "c35e9ea7751d469e60aa7549a1dcbbd386e037492e605e32df84494a2e2e7361"
+    },
+    {
+      "file": "27_八年级_物理_光与透镜.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "光与透镜",
+      "concepts": [
+        "light",
+        "refraction",
+        "lens"
+      ],
+      "logical_chunks": 15,
+      "sha256": "f76fd7c6a61539a308f5ea51ae345ad19b3bdcaeab031bcba176ecf1ab96fcfd"
+    },
+    {
+      "file": "28_八年级_物理_力与运动.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "力与运动",
+      "concepts": [
+        "force",
+        "newton_first_law",
+        "balance_friction"
+      ],
+      "logical_chunks": 15,
+      "sha256": "aeb88f4cde7eb4b135df3429bd3112d8390397db6ba3139286657f7d258e96ab"
+    },
+    {
+      "file": "29_八年级_物理_功、机械能与简单机械.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "功、机械能与简单机械",
+      "concepts": [
+        "work_power",
+        "simple_machine"
+      ],
+      "logical_chunks": 10,
+      "sha256": "7a38fd3bc63f6ee24f4abeb54fd8c1fad407eb74f23453e3ae1bcbe0952751e1"
+    },
+    {
+      "file": "30_八年级_物理_压强与浮力.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "压强与浮力",
+      "concepts": [
+        "pressure",
+        "atmospheric_pressure",
+        "buoyancy"
+      ],
+      "logical_chunks": 15,
+      "sha256": "4bb63a685437cfdd524d92e6fd46342d6a9977db8100a5c48352cde931cdcd49"
+    },
+    {
+      "file": "31_八年级_物理_声与物态变化.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "声与物态变化",
+      "concepts": [
+        "sound",
+        "state_change"
+      ],
+      "logical_chunks": 10,
+      "sha256": "a20f2f103a146faa233c004b967ae88a6796ff7db98573a1c61941309369d819"
+    },
+    {
+      "file": "32_八年级_物理_机械运动.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "机械运动",
+      "concepts": [
+        "measurement",
+        "motion_reference",
+        "average_speed"
+      ],
+      "logical_chunks": 15,
+      "sha256": "0bf887adf3dc7ca31f67c7890d15b0aa1c7f4fd8710e40e88475668d54d84996"
+    },
+    {
+      "file": "33_八年级_物理_质量密度与测量.md",
+      "subject": "物理",
+      "grade": "八年级",
+      "chapter": "质量密度与测量",
+      "concepts": [
+        "density"
+      ],
+      "logical_chunks": 5,
+      "sha256": "407d2c96747e7c6fa73196ac642e5a873a3ac2bf9443680829c1741f2ab95c0e"
+    }
+  ],
+  "source_registry": "knowledge_base/public_sources/SOURCE_REGISTRY.md",
+  "generated_at": "2026-07-23 00:36:29"
+}
