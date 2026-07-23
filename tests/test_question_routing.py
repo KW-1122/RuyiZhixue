@@ -74,6 +74,31 @@ class QuestionRoutingTests(unittest.TestCase):
         self.assertEqual(result["stage"], "local-grounded")
         self.assertEqual(result["engine"], "本地 RAG 备用 + 大模型")
 
+    def test_common_difference_question_uses_local_rag_when_dify_misses(self):
+        self.service.dify.dataset_key = "dataset-key"
+        self.service.dify.dataset_id = "dataset-id"
+        with patch.object(type(self.service.llm), "enabled", new_callable=PropertyMock, return_value=True), patch.object(
+            self.service.dify,
+            "retrieve",
+            return_value=[],
+        ), patch.object(
+            self.service.llm,
+            "answer",
+            return_value="本地 RAG 增强回答",
+        ):
+            result = self.service.answer({
+                "query": "速度和平均速度有什么区别",
+                "student_id": "t",
+                "grade": "八年级",
+                "subject": "物理",
+                "mode": "快速讲解",
+            })
+
+        self.assertEqual(result["stage"], "local-grounded")
+        self.assertEqual(result["engine"], "本地 RAG 备用 + 大模型")
+        self.assertTrue(result["sources"])
+        self.assertIn("速度与平均速度", result["sources"][0]["title"])
+
     def test_missing_dify_and_local_knowledge_uses_general_llm(self):
         self.service.dify.dataset_key = "dataset-key"
         self.service.dify.dataset_id = "dataset-id"

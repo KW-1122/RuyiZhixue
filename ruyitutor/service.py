@@ -22,8 +22,8 @@ class TutorService:
     DIFY_EVIDENCE_THRESHOLD = 0.25
     LOCAL_EVIDENCE_THRESHOLD = 6.0
     TOPIC_SPLIT_PATTERN = re.compile(
-        r"请|给我|讲讲|讲解|讲|解释|说明|介绍|学习|了解|什么|怎么|如何|为什么|为何|的|和|与|及|"
-        r"区别|背景|实验|一下|吗|呢"
+        r"请|给我|讲讲|讲解|讲|解释|说明|介绍|学习|了解|是什么|有什么|有没有|什么|怎么|"
+        r"如何|为什么|为何|是|有|的|和|与|及|区别|背景|实验|一下|吗|呢"
     )
 
     def __init__(self, root: Path):
