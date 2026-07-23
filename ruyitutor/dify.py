@@ -9,6 +9,8 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 import requests
 
+from .response_cleaning import strip_thinking
+
 
 class DifyClient:
     def __init__(self):
@@ -70,7 +72,7 @@ class DifyClient:
         resources = result.get("metadata", {}).get("retriever_resources", [])
         resources = [item for item in resources if float(item.get("score", 0) or 0) >= 0.25]
         return {
-            "answer": result.get("answer", ""),
+            "answer": strip_thinking(result.get("answer", "")),
             "sources": [{
                 "title": item.get("document_name", "知识库资料"),
                 "score": round(float(item.get("score", 0)), 3),
@@ -115,6 +117,6 @@ class DifyClient:
             payload = {"inputs":{},"query":"只提取图片中的题干、公式和选项，保持原顺序，不要解题。","response_mode":"blocking","user":self.user,
                        "files":[{"type":"image","transfer_method":"local_file","upload_file_id":file_id}]}
             response=requests.post(f"{self.base_url}/chat-messages",json=payload,headers=self._headers(),timeout=90)
-            response.raise_for_status(); return str(response.json().get("answer", "")).strip()
+            response.raise_for_status(); return strip_thinking(str(response.json().get("answer", "")))
         except (requests.RequestException, KeyError, ValueError):
             return ""
