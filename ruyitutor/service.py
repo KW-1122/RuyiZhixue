@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from uuid import uuid4
 import json
+import os
+import re
 
 from .dify import DifyClient
 from .graph import KnowledgeGraph
@@ -18,6 +20,10 @@ from .llm import GroundedLLM
 
 class TutorService:
     UNSAFE = ("自杀", "伤害自己", "炸弹", "毒药")
+    NAMED_TOPIC_PATTERNS = (
+        re.compile(r"[一二三四五六七八九十两]+元[一二三四五六七八九十两]+次方程组"),
+        re.compile(r"[一二三四五六七八九十两]+元[一二三四五六七八九十两]+次不等式组"),
+    )
 
     def __init__(self, root: Path):
         self.root = root
@@ -37,7 +43,7 @@ class TutorService:
 
     @property
     def engine_name(self) -> str:
-        if self.dify.enabled: return "Dify RAG（本地降级已就绪）"
+        if self.dify.enabled and os.getenv("RAG_PIPELINE_MODE", "local").lower() == "dify": return "Dify RAG（本地降级已就绪）"
         if self.llm.enabled: return "DeepSeek + BGE/FAISS GraphRAG"
         return "本地 GraphRAG 演示引擎"
 
@@ -55,7 +61,7 @@ class TutorService:
                 "sources": [], "engine": "安全守护", "concepts": [], "confidence": 1.0,
                 "conversation_id": conversation_id, "stage": "safety",
             }
-        if self.dify.enabled:
+        if self.dify.enabled and os.getenv("RAG_PIPELINE_MODE", "local").lower() == "dify":
             try:
                 result = self.dify.chat(query, {k: request[k] for k in ("grade", "subject", "mode")})
                 result.update({"concepts": [], "confidence": self._confidence(result["sources"]),
@@ -67,7 +73,7 @@ class TutorService:
             except RuntimeError:
                 pass
         first = self.rag.search(query, top_k=3)
-        if not first or first[0]["score"] < 6.0:
+        if not first or first[0]["score"] < 6.0 or not self._evidence_covers_named_topic(query, first):
             return {
                 "answer": "这个问题超出了当前初中数学与物理知识库的可靠范围。我不想凭空猜测。你可以换一种说法，或请老师把对应资料加入知识库后再问我。",
                 "sources": [], "engine": "本地 GraphRAG", "concepts": [], "confidence": 0.12,
@@ -135,6 +141,17 @@ class TutorService:
         self.answer_logs.append({"student_id": request["student_id"], "query": query, "concept_id": best.concept_id, "confidence": result["confidence"], "grounded": result["validation"]["grounded"]})
         self.storage.save_message(conversation_id, request["student_id"], "assistant", answer, {"concept_id":best.concept_id,"confidence":result["confidence"],"sources":sources})
         return result
+
+    @classmethod
+    def _evidence_covers_named_topic(cls, query: str, hits: list[dict]) -> bool:
+        evidence = " ".join(
+            f"{item['document'].title} {item['document'].content}" for item in hits
+        )
+        for pattern in cls.NAMED_TOPIC_PATTERNS:
+            topic = pattern.search(query)
+            if topic and topic.group(0) not in evidence:
+                return False
+        return True
 
     @staticmethod
     def _confidence(sources: list[dict]) -> float:

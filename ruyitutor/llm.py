@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 from openai import OpenAI
 
 
@@ -34,4 +35,7 @@ class GroundedLLM:
             temperature=0.2,
             max_tokens=900,
         )
-        return response.choices[0].message.content.strip()
+        answer = response.choices[0].message.content.strip()
+        answer = re.sub(r"<think>.*?</think>", "", answer, flags=re.I | re.S)
+        answer = re.sub(r"</?think>", "", answer, flags=re.I)
+        return answer.strip()
